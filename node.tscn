@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cmvmutrcaamj8"]
+
+[ext_resource type="Script" uid="uid://br84eqtffxtya" path="res://commands.gd" id="1_sy5k4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sy5k4"]
+bg_color = Color(0.18039216, 0.18039216, 0.18039216, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2q8x"]
+content_margin_left = 4.0
+bg_color = Color(0.18039216, 0.18039216, 0.18039216, 1)
+
+[node name="Node" type="Control" unique_id=1473717651 node_paths=PackedStringArray("cmd")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sy5k4")
+cmd = NodePath("CenterContainer/VBoxContainer/LineEdit")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=806552263]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+offset_right = 256.0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1261847081]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Clue1" type="PanelContainer" parent="CenterContainer/VBoxContainer" unique_id=691143675]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sy5k4")
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Clue1" unique_id=1707751994]
+layout_mode = 2
+text = " help"
+
+[node name="Clue2" type="PanelContainer" parent="CenterContainer/VBoxContainer" unique_id=497651621]
+visible = false
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sy5k4")
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Clue2" unique_id=1227240081]
+layout_mode = 2
+text = " hello"
+
+[node name="LineEdit" type="LineEdit" parent="CenterContainer/VBoxContainer" unique_id=1311029542]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_j2q8x")
+theme_override_styles/focus = SubResource("StyleBoxFlat_j2q8x")
+placeholder_text = "Enter command"
+keep_editing_on_text_submit = true

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bh62iwjbdfmub"]
+
+[ext_resource type="Script" uid="uid://dsqyhp7312ntk" path="res://json_fetch.gd" id="1_wtcfe"]
+
+[node name="Node2D" type="Control" unique_id=1644908563 node_paths=PackedStringArray("http_request")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_wtcfe")
+http_request = NodePath("HTTPRequest")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="." unique_id=741044992]
